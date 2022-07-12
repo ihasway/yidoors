@@ -1,0 +1,27 @@
+{
+    "system": {
+        "calculator": {
+            "location": "appc/calculator/index.appc",
+            "icon": "appc/calculator/icon.svg",
+            "pinned": true
+        },
+        "linepad": {
+            "location": "appc/linepad/index.appc",
+            "icon": "appc/linepad/icon.svg",
+            "pinned": true
+        },
+        "cmdshell": {
+            "location": "appc/cmdshell/index.appc",
+            "icon": "appc/cmdshell/icon.svg",
+            "pinned": true
+        },
+        "system": {
+            "location": false,
+            "icon": "appc/system/icon.svg",
+            "pinned": false
+        }
+    },
+    "installed": {
+        
+    }
+}

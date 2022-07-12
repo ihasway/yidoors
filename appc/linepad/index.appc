@@ -1,0 +1,14 @@
+<div id="editor1"></div>
+<appc>
+    {
+    "width": "40%",
+
+    "height": "300px",
+
+    "script": ["https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"],
+    
+    "localscript" : "CKEDITOR.replace('editor1');",
+
+    "info":"Linepad 1.0\nLinepad is open-source software for writing and it is used CKEditor Api."
+    }
+</appc>

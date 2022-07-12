@@ -1,0 +1,20 @@
+
+<div id="cmd"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+
+<appc>
+    {
+
+    "width": "40%",
+
+    "height": "300px",
+
+    "script": ["https://code.jquery.com/jquery-3.3.1.min.js",
+    "https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"],
+
+    "localscript":" $('#cmd').terminal(cmdtool, { greetings: '[[;rgba(255,255,255,0.99);]Yidoors (v1.0.10001)\\n(C) Ihasway. All rights reserved.\\n]', name: 'yidoors_cmdshell', height: 300, prompt: 'C:/Users/1> ' }); ",
+
+    "info":"Command shell 1.0\nCommand shell or cmd is open-source software for line command and it is used Terminal Api."
+    }
+</appc>

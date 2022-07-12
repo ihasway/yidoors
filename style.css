@@ -1,0 +1,328 @@
+/* 
+          Display Size : 1920 * 1080 (16:9) 56%
+          Color Theme :
+           - Background Color : #0000ff
+           - Text Color : #fff + darkshadow
+*/
+body {
+    margin: 0;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.desktop * {
+    box-sizing: border-box;
+}
+
+.desktop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #7c7cf8;
+    background-image: url(icon/yidoors-banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.monitor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 1px #333;
+}
+
+.screen {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen>.taskbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6vw;
+    max-height: 45px;
+    background-color: #fff;
+    display: flex;
+    cursor: default;
+    z-index: 1000;
+    user-select: none;
+}
+
+.screen>.taskbar>.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6vw;
+    max-width: 50px;
+    height: 100%;
+    background-image: url(icon/yidoors.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.screen>.taskbar>.find input {
+    width: calc(20px + 20vw);
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+    border: 2px solid #bbb;
+    outline: none;
+    font-size: calc(8px + .5vw);
+    padding: 0 10px;
+}
+
+.screen>.taskbar>.find input:hover {
+    border-color: #aaa;
+    box-shadow: inset 0 0 calc(.1px + .2vw) #aaa;
+}
+
+.screen>.taskbar>.display {
+    padding: 0 calc(.1px + 0vw);
+    color: rgb(110, 110, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen>.taskbar>.display p {
+    font-size: calc(3px + .5vw);
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.screen>.taskbar>.display>.keyboard {
+    width: 6vw;
+    max-width: 50px;
+    height: 100%;
+    background-image: url(icon/yidoors-keyboard.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.screen>.taskbar>.display>.keyboard:hover {
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    background-color: rgba(0, 0, 0, 0.092);
+}
+
+.screen>.taskbar>.appc {
+    display: flex;
+}
+
+.screen>.taskbar>.appc>div {
+    width: 6vw;
+    max-width: 70px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    border-left: 4.5px solid #fff;
+    border-right: 4.5px solid #fff;
+    border-bottom: 2.5px solid #fff;
+}
+
+.screen>.taskbar>.appc>div.active {
+    border-bottom: 3px solid #7c7cf8;
+    background-color: rgba(0, 0, 0, 0.099);
+}
+
+.screen>.taskbar>.appc>div:hover {
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.screen>.taskbar>.appc article {
+    display: none !important;
+}
+
+.screen header {
+    width: 80%;
+    height: 70%;
+    max-width: 95%;
+    max-height: 85%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #333;
+    z-index: 999;
+    color: #333;
+}
+
+.screen header>.head {
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    max-height: 35px;
+    border-bottom: 1px solid #333;
+    cursor: move;
+    display: flex;
+    user-select: none;
+}
+
+.screen header>.head>p {
+    max-width: 200px;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 2px;
+    font-size: calc(11px + .5vw);
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+.screen header>.head>div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+}
+
+.screen header>.head>div>span {
+    height: 100%;
+    padding: 0 1vw;
+    text-align: center;
+    background-color: crimson;
+    color: #fff;
+    cursor: default;
+}
+
+.screen header>.head>div>div {
+    height: 100%;
+    padding: 0 1vw;
+    text-align: center;
+    background-color: #ddd;
+    color: #333;
+    cursor: default;
+}
+
+.screen header>.body {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 3vw);
+    scroll-behavior: smooth;
+    overflow: scroll;
+    user-select: text;
+}
+
+.screen header>.resizer {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #aaa;
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    cursor: nwse-resize;
+}
+
+.screen>.display>.document>.contextmenu {
+    display: none;
+    position: fixed;
+    width: calc(170px + 2vw);
+    background-color: #fff;
+    box-shadow: 0 0 6px #333;
+    z-index: 999.999;
+    padding: 10px 0;
+    cursor: default;
+    user-select: none;
+}
+
+.screen>.display>.document>.contextmenu>div {
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.screen>.display>.document>.contextmenu>div:hover {
+    background-color: rgba(0, 0, 0, 0.099);
+}
+
+.screen>.display>.document>.contextmenu>section {
+    width: calc(100% - 10px);
+    height: 1px;
+    background-color: #aaa;
+    margin: 10px 5px;
+}
+
+.screen>.display>.document {
+    position: absolute;
+    top: 2.3vw;
+    width: 100%;
+    height: 100%;
+}
+
+.alert {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.102);
+    z-index: 1002;
+}
+
+.alert-box {
+    position: relative;
+    width: 300px;
+    min-height: 100px;
+    margin-top: 50px;
+    border-radius: .2rem;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 3px #333;
+}
+
+.alert-box::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.alert-box h1 {
+    font-size: 0.9em;
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 7px 10px;
+}
+
+.alert-box p {
+    font-size: 0.7em;
+    min-height: 50px;
+    max-height: 300px;
+    text-overflow: ellipsis;
+    padding-left: 15px;
+}
+
+.alert-box .close-btn {
+    float: right;
+    width: 70px;
+    font-size: 0.7em;
+    display: block;
+    padding: 5px 7px;
+    margin: 5px;
+    border: 0;
+    color: #333;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+.alert-box .close-btn:hover {
+    border-color: #7c7cf8;
+}
